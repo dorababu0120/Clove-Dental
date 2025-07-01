@@ -1,0 +1,1293 @@
+/* Base Styles */
+:root {
+    --primary-color: #f58420;
+    --primary-dark: #de6f0c;
+    --primary-hover: #e68937;
+    --secondary-color: #462512;
+    --text-color: #1a1a1a;
+    --text-secondary: #474747;
+    --text-light: #777777;
+    --bg-light: #fffaf5;
+    --bg-lighter: #fff9f4;
+    --border-light: #ffdfc4;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Figtree', sans-serif;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style-position: inside;
+    margin-bottom: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 60%;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-text,
+.hero-image {
+    flex: 1;
+}
+
+.consultation-card {
+    flex: 1 1 35%;
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* Responsive for tablets and below */
+@media (max-width: 991px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text,
+    .hero-image,
+    .consultation-card {
+        width: 100%;
+    }
+}
+
+
+/* Button Styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    height: 38px;
+}
+
+.btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 1px solid var(--primary-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-outline {
+    background-color: var(--white);
+    color: var(--text-color);
+    border: 1px solid var(--secondary-color);
+}
+
+.btn-outline:hover {
+    background-color: #f5f5f5;
+}
+
+/* Header Styles */
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: var(--bg-light);
+    position: relative;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1320px;
+    margin: 0 auto;
+    padding-top: 16px;
+}
+
+.logo {
+    width: 94px;
+    height: 38px;
+    position: relative;
+}
+
+.logo img {
+    position: absolute;
+    width: 128px;
+    height: 52px;
+    top: -7px;
+    left: -17px;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 450px;
+    width: 100%;
+    display: flex;
+}
+
+.hero-content {
+    position: relative;
+    height: 450px;
+    width: 67%;
+    background-image: url('https://c.animaapp.com/mcj31pq6YUGbdX/img/empty-stomatology-orthodontist-bright-office-room-with-nobody-it-1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px 60px;
+    position: absolute;
+    top: 149px;
+    left: 0;
+    width: 644px;
+    backdrop-filter: blur(7.5px);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.hero-text h1 {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 30px;
+    color: var(--text-color);
+}
+
+.hero-text p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20.8px;
+    color: #4e4e4e;
+}
+
+.hero-image img {
+    position: absolute;
+    width: 314px;
+    height: 406px;
+    top: 44px;
+    right: 100px;
+}
+
+/* Consultation Card */
+.consultation-card {
+    width: 33%;
+    height: 450px;
+    background-color: var(--bg-lighter);
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1px solid var(--border-light);
+}
+
+.consultation-card .card-header {
+    margin-bottom: 20px;
+}
+
+.consultation-card h2 {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+
+.consultation-card p {
+    font-size: 16px;
+    line-height: 20.8px;
+    color: var(--text-secondary);
+}
+
+.consultation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.consultation-form .form-input {
+    height: 38px;
+    padding: 0 16px;
+    border-radius: 24px;
+    border: 1px solid var(--border-light);
+    font-size: 14px;
+}
+
+.consultation-form .captcha-container {
+    display: flex;
+}
+
+.consultation-form .captcha-input {
+    border-radius: 24px 0 0 24px;
+    flex: 1;
+}
+
+.consultation-form .captcha-code {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 38px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-radius: 0 24px 24px 0;
+    font-size: 14px;
+}
+
+.consultation-form .terms-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.consultation-form .terms-checkbox input {
+    width: 19px;
+    height: 19px;
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    margin-top: 2px;
+}
+
+.consultation-form .terms-checkbox label {
+    font-size: 12px;
+    line-height: 15.6px;
+    text-align: left;
+}
+
+.consultation-form .terms-checkbox a {
+    text-decoration: underline;
+}
+
+.consultation-form .btn {
+    width: 100%;
+}
+
+/* Stats Section */
+.stats-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* allow dynamic height since it will scroll horizontally */
+    background-color: var(--bg-lighter);
+    margin-top: 20px;
+    overflow-x: auto;
+    /* allow horizontal scroll */
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* ✅ Don't allow wrapping */
+    gap: 40px;
+    /* ✅ Spacing between stat items */
+    overflow-x: auto;
+    /* ✅ Enable horizontal scrolling */
+    padding: 10px 20px;
+    min-width: max-content;
+    /* ✅ Ensure container grows to fit all children */
+    -webkit-overflow-scrolling: touch;
+    /* ✅ Smooth scroll on iOS */
+}
+
+
+.stat-item {
+    flex: 0 0 auto;
+    /* ✅ Prevent shrinking or growing */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 160px;
+    /* ✅ Optional: Set a width per item */
+}
+
+
+.stat-item img {
+    width: 35px;
+    height: 38px;
+}
+
+.stat-icon-stacked {
+    position: relative;
+    width: 33px;
+    height: 38px;
+}
+
+.icon-top {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    top: 0;
+    left: 6px;
+}
+
+.icon-bottom {
+    position: absolute;
+    width: 34px;
+    height: 17px;
+    top: 22px;
+    left: 0;
+}
+
+.stat-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 18.2px;
+}
+
+.stat-label {
+    font-weight: bold;
+    color: var(--black);
+}
+
+/* Optional scrollbar style */
+.stats-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.stats-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+
+/* Main Content */
+.main-content {
+    margin-top: 60px;
+    padding: 0 60px;
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    line-height: 31.2px;
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--text-secondary);
+}
+
+/* Treatment Types Section */
+.treatment-section {
+    margin-bottom: 60px;
+}
+
+
+/* Treatment Cards Wrapper */
+.treatment-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Prevent wrapping on small screens */
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 16px;
+}
+
+/* Individual Treatment Card */
+.treatment-card {
+    flex: 0 0 100%;
+    /* Take full width of the container */
+    scroll-snap-align: start;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    box-sizing: border-box;
+    min-width: 90%;
+    /* Optional: adds breathing room on mobile */
+}
+
+/* Remove scrollbars (optional) */
+.treatment-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.treatment-cards {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Two cards side-by-side on medium (tablet) and up */
+@media (min-width: 768px) {
+    .treatment-cards {
+        flex-wrap: wrap;
+        /* Allow wrapping on larger screens */
+        overflow-x: visible;
+        /* Stop horizontal scrolling */
+    }
+
+    .treatment-card {
+        flex: 0 0 calc(50% - 8px);
+        /* 2 cards in a row with gap */
+        min-width: unset;
+    }
+}
+
+
+.treatment-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-header h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.card-header p {
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+.treatment-types h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.treatment-types p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 20.8px;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.price-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color);
+    line-height: 18.2px;
+}
+
+.price-amount {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Transformations Section */
+.transformations-section {
+    margin-bottom: 60px;
+}
+
+.transformation-gallery {
+    display: flex;
+    gap: 40px;
+}
+
+.transformation-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.transformation-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.transformation-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.patient-name {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.patient-location {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+/* Why Choose Clove Section */
+.why-choose-section {
+    margin-bottom: 60px;
+}
+
+.features-container {
+    margin-top: 40px;
+}
+
+.features-list {
+    display: flex;
+    align-items: center;
+}
+
+.feature-accordion {
+    width: 60%;
+}
+
+.accordion {
+    width: 100%;
+}
+
+.accordion-item {
+    margin-bottom: 20px;
+}
+
+.accordion-header {
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.accordion-button::after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.accordion-button.active::after {
+    transform: rotate(-135deg);
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px 0;
+}
+
+.accordion-content.active {
+    display: block;
+}
+
+.accordion-content p {
+    font-weight: 600;
+    font-size: 16px;
+    color: #646464;
+    margin-bottom: 16px;
+}
+
+.accordion-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.accordion-content li {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.features-image {
+    width: 40%;
+}
+
+.features-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Appointment Form Section */
+.appointment-form-section {
+    margin-bottom: 60px;
+    background-color: var(--bg-lighter);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.appointment-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-row {
+    display: flex;
+    gap: 24px;
+}
+
+.form-input {
+    flex: 1;
+    height: 38px;
+    padding: 0 16px;
+    border-radius: 24px;
+    border: 1px solid var(--border-light);
+    font-size: 14px;
+}
+
+.captcha-container {
+    display: flex;
+    flex: 1;
+}
+
+.captcha-input {
+    border-radius: 24px 0 0 24px;
+}
+
+.captcha-code {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 38px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-radius: 0 24px 24px 0;
+    font-size: 14px;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.terms-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.terms-checkbox input {
+    width: 19px;
+    height: 19px;
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+}
+
+.terms-checkbox label {
+    font-size: 12px;
+    line-height: 15.6px;
+    text-align: left;
+}
+
+.terms-checkbox a {
+    text-decoration: underline;
+}
+
+/* Safety Features Section */
+.safety-section {
+    margin-bottom: 60px;
+}
+
+.safety-features {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.safety-feature {
+    flex: 1;
+    height: 345px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 80%;
+    position: absolute;
+    bottom: 40px;
+    left: 10%;
+    border-radius: 10px;
+}
+
+.dark-bg {
+    background-color: #112230;
+}
+
+.brown-bg {
+    background-color: var(--secondary-color);
+}
+
+.feature-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.feature-header h3 {
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--white);
+    white-space: pre-line;
+}
+
+.feature-header hr {
+    flex: 1;
+    height: 2px;
+    background-color: var(--white);
+    border: none;
+}
+
+.feature-content p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20.8px;
+    color: var(--white);
+}
+
+.learn-more {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.learn-more img {
+    width: 20px;
+    height: 20px;
+}
+
+.learn-more span {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.faq-section h2 {
+    margin-bottom: 40px;
+}
+
+.faq-columns {
+    display: flex;
+    gap: 60px;
+}
+
+.faq-column {
+    flex: 1;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Hide sections by default */
+.appointment-form-section,
+.safety-section {
+    display: none;
+}
+
+/* Show sections on large screens and up */
+@media (min-width: 1200px) {
+
+    .appointment-form-section,
+    .safety-section {
+        display: block;
+    }
+}
+
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20.8px;
+    cursor: pointer;
+    padding: 12px 0;
+    position: relative;
+    padding-right: 30px;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+    content: '-';
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px 0;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+.faq-answer p {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 10px 0;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--secondary-color);
+    padding: 40px 0;
+    color: var(--white);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    width: 174px;
+    height: 69px;
+}
+
+.footer-content {
+    width: 837px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 24px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 27px;
+}
+
+.footer-nav a {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-content hr {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.copyright {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1440px) {
+
+    .container,
+    .nav-container,
+    .footer-container {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-section,
+    .stats-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .transformation-gallery,
+    .safety-features,
+    .faq-columns {
+        flex-direction: column;
+    }
+
+    .features-list {
+        flex-direction: column;
+    }
+
+    .feature-accordion,
+    .features-image {
+        width: 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-text {
+        width: 100%;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+
+    .hero-image img {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-content {
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .container,
+    .nav-container,
+    .footer-container {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .header {
+        height: auto;
+        min-height: 56px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+        padding-top: 8px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 32px;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .hero-section,
+    .stats-section {
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    .hero-content {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        background-image: none;
+        padding: 0;
+    }
+
+    .hero-text {
+        width: 100%;
+        padding: 16px 0;
+        position: static;
+        gap: 12px;
+        background: none;
+        backdrop-filter: none;
+    }
+
+    .hero-text h1 {
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        width: 90vw;
+        max-width: 320px;
+        height: auto;
+        margin: 0 auto 16px auto;
+        display: block;
+        position: static;
+        border-radius: 16px;
+    }
+
+    .consultation-card {
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+        border-left: none;
+        border-top: 1px solid var(--border-light);
+        margin-top: 16px;
+    }
+
+    .stats-section {
+        padding: 20px 0;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+
+    .stat-item {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    .main-content,
+    .section-header,
+    .treatment-section,
+    .treatment-cards,
+    .transformations-section,
+    .transformation-gallery,
+    .why-choose-section,
+    .features-container,
+    .features-list,
+    .feature-accordion,
+    .accordion,
+    .faq-section,
+    .faq-columns,
+    .footer-content {
+        width: 100%;
+        padding: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .treatment-cards,
+    .transformation-gallery,
+    .faq-columns {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .footer {
+        padding: 24px 0;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .footer-logo {
+        width: 120px;
+        height: auto;
+    }
+
+    .stats-section,
+    .main-content,
+    .treatment-section,
+    .transformations-section,
+    .why-choose-section,
+    .faq-section {
+        margin-bottom: 24px;
+    }
+
+    .stats-container,
+    .treatment-cards,
+    .transformation-gallery {
+        flex-direction: column !important;
+        gap: 16px;
+    }
+
+    .transformation-gallery {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 16px;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 12px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .transformation-item {
+        min-width: 80vw;
+        /* Show one card at a time */
+        max-width: 90vw;
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .stats-section,
+    .main-content,
+    .treatment-section,
+    .transformations-section,
+    .why-choose-section,
+    .faq-section {
+        margin-bottom: 24px;
+        width: 100%;
+        height: auto !important;
+    }
+
+    .stats-container,
+    .treatment-cards,
+    .transformation-gallery {
+        flex-direction: column !important;
+        gap: 16px;
+    }
+
+    .stat-item {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+}
